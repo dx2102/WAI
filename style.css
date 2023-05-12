@@ -14,17 +14,12 @@ html {
   }
 }
 
-h1 {
+.gradient {
   /* gradient blue text*/
-  background: -webkit-linear-gradient(315deg,#428899 25%,#3488ff);
-  background-clip: text;
+  background: -webkit-linear-gradient(315deg,#448899 25%,#334488);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-body {
-  text-indent: 2em;
-  /* more space between lines */
 }
 
 a {

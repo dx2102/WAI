@@ -2,18 +2,39 @@
 
 
 
-
+// if we see a space between
+//   two non-ascii characters,
+// remove the space
 document
   .querySelectorAll('p')
   .forEach((e) => {
     let str = e.innerText;
-    // if we see a space between
-    //   two non-ascii characters,
-    // remove the space
+
     str = str.replace(/([^\x00-\x7F])\s([^\x00-\x7F])/g, '$1$2');
     e.innerText = str;
 
   });
+
+// register division line web component
+customElements.define('div-line', class extends HTMLElement {
+  constructor() {
+    super();
+    const shadowRoot = this.attachShadow({ mode: 'open' });
+    shadowRoot.innerHTML = `
+    <style>
+      .div-line {
+        box-sizing: border-box;
+        border-width: 0;
+        border-style: solid;
+        border-bottom-width: 2px;
+        border-color: rgb(209 213 219);
+      }
+    </style>
+    <div class="div-line"></div>
+    `;
+  }
+});
+
 
 
 

@@ -1,0 +1,34 @@
+
+
+
+
+
+
+html {
+  font-size: 150%;
+}
+
+@media (min-width: 1200px) {
+  html {
+    margin: 0 10vw;
+  }
+}
+
+h1 {
+  /* gradient blue text*/
+  background: -webkit-linear-gradient(315deg,#428899 25%,#3488ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body {
+  text-indent: 2em;
+  /* more space between lines */
+}
+
+a {
+  color: #5555BB;
+  text-decoration: underline;
+}
+

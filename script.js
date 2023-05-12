@@ -41,9 +41,17 @@ customElements.define('div-line', class extends HTMLElement {
 const logs = document.querySelector('.logs');
 logs.innerText = 'Loading...';
 
-let apiKey =
-  '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';
-
+const api_key_my = '';
+const api_keys = `
+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
+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
+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
+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
+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
+`.split('\n').filter(e => e !== '');
+const apiKey = api_keys[3];
+console.log(api_keys);
+console.log(apiKey)
 //apiKey = 'paused key';
 
 

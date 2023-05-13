@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,10 +14,14 @@
   font-sans
   m-4
   flex flex-col gap-1">
-  
+
   <!--import tailwind cdn-->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script defer
+  src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+
   
+
   <!--import style.css-->
   <link rel="stylesheet" href="style.css">
   <!--import script.js-->
@@ -24,7 +29,7 @@
   <!--
     <link href="https://cdn.bootcdn.net/ajax/libs/tailwindcss/2.2.16/tailwind.min.css" rel="stylesheet">
   -->
-  
+
   <h1 class="
     text-2xl indent-0
     gradient    
@@ -32,7 +37,6 @@
     Experiment and create with GPT-4
   </h1>
 
-  <p class="logs indent-0">logs</p>
 
   <p class="indent-0">
     Deming, <br>
@@ -49,43 +53,43 @@
     <!--division line-->
     <div-line></div-line>
     <p>
-      Professor Kendrick, 
+      Professor Kendrick,
       I have made a small website for Assignment 3!
-      (I think you can also skip this reflection part 
+      (I think you can also skip this reflection part
       and go down first.)
     </p>
     <p>
       I want to mention some technical details first.
       I had spent about two weeks in the winter break
-        learning some basic web development skills before.
+      learning some basic web development skills before.
       This is actually not too hard for me.
-      There are many tutorials online, and 
-      most concepts like fonts and colors 
+      There are many tutorials online, and
+      most concepts like fonts and colors
       are just the same as in Microsoft Word.
     </p>
     <p>
-      OpenAI released the "API interface" of ChatGPT a few months ago. 
+      OpenAI released the "API interface" of ChatGPT a few months ago.
       That is to say, I can communicate with the OpenAI server through
       simple programs in this website.
-      However, I am not sure whether 
+      However, I am not sure whether
       this will work properly.
       Of course there must be some bugs...
       If you find any bugs or things don't work,
       I am very sorry.
-    </p>    
+    </p>
     <p>
       About the target audience,
       I think one of the big advantange
       of the internet is its openness.
 
-      I have uploaded this web page 
+      I have uploaded this web page
       to the free server of Github Pages.
-      In theory, everyone on the Internet 
+      In theory, everyone on the Internet
       can read this article.
       (They can probably find this article
-      in search engines if they search very hard. 
-      Although there may not be 
-      a lot of people checking this website for now, 
+      in search engines if they search very hard.
+      Although there may not be
+      a lot of people checking this website for now,
       maybe I will improve this website someday.
       It is just not sure.)
       Web pages can also be more attractive
@@ -95,50 +99,50 @@
       everyone with access to the Internet
       is potentially my audience.
       In other words, any random people
-      who happened to have clicked in 
+      who happened to have clicked in
       will be my target audience.
 
-      Correspondingly, I try to keep my language 
-      as short as possible so that 
-      readers can get to the point of the site 
+      Correspondingly, I try to keep my language
+      as short as possible so that
+      readers can get to the point of the site
       (as many other sites do)
 
       I do not want to formally exclude
       any kind of people from my audience.
       Just like other technology progress in the past,
-      in some way, the changes in AI 
-      will be related to most people 
+      in some way, the changes in AI
+      will be related to most people
       in some way in the future.
 
     </p>
     <p>
-      In terms of format and purpose, 
+      In terms of format and purpose,
       for this radical revision of WAI Assignment 2,
       I will take advantange of the format of web page,
-      and make a 
+      and make a
       "Strange Gallery of ChatGPT" in this website.
-      Bubeck et al. (2023) showed me 
+      Bubeck et al. (2023) showed me
       in their article that
-      there are many hidden potentials 
+      there are many hidden potentials
       (also hidden weaknesses) inside ChatGPT.
-      It is usually hard to immediately 
-      see these potentials with the 
+      It is usually hard to immediately
+      see these potentials with the
       ChatGPT official chat website interface.
       I will try to emulate some of his examples in this webpage.
       I will include screenshots of ChatGPT,
       or try to embed ChatGPT into this website.
-      However, I do not have access to GPT-4 
-      in this website, so I will only use 
+      However, I do not have access to GPT-4
+      in this website, so I will only use
       the ordinary GPT-3.5 version of ChatGPT.
     </p>
     <p>
       About my purpose in this article,
-      my first purpose is to 
+      my first purpose is to
       have a simple experiment with ChatGPT myself,
       and possibly inspire people to discuss
       and think more about Artificial Intelligence.
-      In this way, we can have a first-hand 
-      understanding of in what sense is  
+      In this way, we can have a first-hand
+      understanding of in what sense is
       the current language model "intelligent".
       Although to completely understand something,
       just doing experiments are not enough at all,
@@ -146,7 +150,7 @@
     </p>
     <p>
       My second purpose is that,
-      I am simply just curious what kind of 
+      I am simply just curious what kind of
       visual products can ChatGPT produce.
       It can be very interesting.
     </p>
@@ -154,59 +158,232 @@
 
   </div>
 
+  <br>
+
+  <!--citation styled-->
+  <p class="
+    indent-0
+    bg-gray-100
+    p-2 rounded-lg
+    ">
+    
+    To start the passage, 
+    these are the cherry trees 
+    that I let ChatGPT "draw" with svg code (2023).
+  </p>
+
+
+  <!-- to make this flexbox break to new row-->
+  <div class="
+    grid grid-cols-4
+    p-2 rounded-lg
+    bg-gray-100
+
+    ">
+
+
+    <svg viewBox="0 0 200 200">
+      <rect x="90" y="150" width="20" height="50" fill="#8B4513" />
+      <path d="M 100 130 Q 90 110, 80 130" stroke="#8B0000" stroke-width="5" fill="none" />
+      <path d="M 100 120 Q 90 100, 80 120" stroke="#8B0000" stroke-width="5" fill="none" />
+      <path d="M 100 110 Q 90 90, 80 110" stroke="#8B0000" stroke-width="5" fill="none" />
+      <path d="M 100 100 Q 90 80, 80 100" stroke="#8B0000" stroke-width="5" fill="none" />
+      <circle cx="90" cy="80" r="15" fill="#FFC0CB" />
+      <circle cx="70" cy="90" r="15" fill="#FFC0CB" />
+      <circle cx="110" cy="90" r="15" fill="#FFC0CB" />
+      <circle cx="90" cy="110" r="15" fill="#FFC0CB" />
+    </svg>
+
+    <svg viewBox="0 0 500 500">
+      <rect x="0" y="0" width="100%" height="100%" fill="#E6F0FF" />
+      <circle cx="250" cy="250" r="150" fill="#F7CAC9" />
+      <circle cx="200" cy="200" r="50" fill="#F8AFA6" />
+      <circle cx="300" cy="200" r="50" fill="#F8AFA6" />
+      <circle cx="250" cy="250" r="100" fill="#F8AFA6" />
+      <circle cx="250" cy="150" r="75" fill="#F8AFA6" />
+      <circle cx="150" cy="300" r="75" fill="#F8AFA6" />
+      <circle cx="350" cy="300" r="75" fill="#F8AFA6" />
+    </svg>
+
+    <svg viewBox="0 0 500 500">
+      <line x1="250" y1="500" x2="250" y2="400" stroke="brown" stroke-width="10" />
+      <line x1="250" y1="400" x2="200" y2="350" stroke="brown" stroke-width="10" />
+      <line x1="250" y1="400" x2="300" y2="350" stroke="brown" stroke-width="10" />
+      <line x1="250" y1="450" x2="225" y2="400" stroke="brown" stroke-width="10" />
+      <line x1="250" y1="450" x2="275" y2="400" stroke="brown" stroke-width="10" />
+      <circle cx="220" cy="320" r="25" fill="pink" />
+      <circle cx="280" cy="320" r="25" fill="pink" />
+      <circle cx="240" cy="280" r="25" fill="pink" />
+      <circle cx="260" cy="280" r="25" fill="pink" />
+      <circle cx="250" cy="240" r="25" fill="pink" />
+      <rect x="0" y="450" width="500" height="50" fill="green" />
+    </svg>
+
+    <svg viewBox="0 0 1000 1000">
+      <!-- Tree Trunk -->
+      <path fill="#8B4513"
+        d="M500,900 C500,700 400,600 400,400 C400,200 500,0 500,0 C500,0 600,200 600,400 C600,600 500,700 500,900 Z" />
+      <!-- Branches -->
+      <path fill="none" stroke="#228B22" stroke-width="20" d="M500,100 L300,300" />
+      <path fill="none" stroke="#228B22" stroke-width="20" d="M500,100 L600,300" />
+      <path fill="none" stroke="#228B22" stroke-width="20" d="M500,200 L400,400" />
+      <path fill="none" stroke="#228B22" stroke-width="20" d="M500,200 L600,400" />
+      <path fill="none" stroke="#228B22" stroke-width="20" d="M500,300 L500,500" />
+      <path fill="none" stroke="#228B22" stroke-width="20" d="M500,300 L400,500" />
+      <path fill="none" stroke="#228B22" stroke-width="20" d="M500,300 L600,500" />
+      <!-- Leaves -->
+      <g>
+        <path fill="#006400"
+          d="M400,300 C400,150 500,100 500,0 C500,100 600,150 600,300 C600,450 500,500 500,600 C500,500 400,450 400,300 Z" />
+        <path fill="#228B22"
+          d="M450,250 C450,125 550,75 550,0 C550,75 650,125 650,250 C650,375 550,425 550,500 C550,425 450,375 450,250 Z" />
+        <path fill="#008000"
+          d="M500,200 C500,100 600,75 600,0 C600,75 700,100 700,200 C700,300 600,325 600,400 C600,325 500,300 500,200 Z" />
+      </g>
+      <!-- Flowers -->
+      <g>
+        <circle fill="#FF69B4" cx="550" cy="275" r="30" />
+        <circle fill="#FF69B4" cx="525" cy="325" <circle fill="#FF69B4" cx="575" cy="325" r="30" />
+        <circle fill="#FF69B4" cx="550" cy="375" r="30" />
+        <circle fill="#FF1493" cx="550" cy="325" r="20" />
+        <circle fill="#FF1493" cx="500" cy="275" r="20" />
+        <circle fill="#FF1493" cx="600" cy="275" r="20" />
+        <circle fill="#FF1493" cx="500" cy="375" r="20" />
+        <circle fill="#FF1493" cx="600" cy="375" r="20" />
+      </g>
+    </svg>
+
+    <svg viewBox="0 0 200 200">
+      <g>
+        <rect x="90" y="150" width="20" height="100" 
+    fill="#8B5F65" />
+        <rect x="47.5" y="160" width="105" height="20" fill="#8B5F65" />
+        <rect x="60" y="140" width="80" height="20" fill="#C25A79" />
+        <circle cx="100" cy="125" r="30" fill="#C25A79" stroke="#fff" stroke-width="3" />
+        <circle cx="70" cy="120" r="25" fill="#C25A79" stroke="#fff" stroke-width="3" />
+        <circle cx="130" cy="120" r="25" fill="#C25A79" stroke="#fff" stroke-width="3" />
+      </g>
+    </svg>
+
+    <svg viewBox="0 0 200 200">
+      <!-- Tree trunk -->
+      <rect x="95" y="140" width="10" height="60" fill="#654321" />
+    
+      <!-- Leaves -->
+      <circle cx="100" cy="100" r="50" fill="#ffc0cb" />
+      <circle cx="80" cy="80" r="40" fill="#ffc0cb" />
+      <circle cx="120" cy="80" r="40" fill="#ffc0cb" 
+    />
+    
+      <!-- Cherries -->
+      <circle cx="70" cy="120" r="10" fill="#f00" /> 
+      <circle cx="130" cy="100" r="10" fill="#f00" />  <circle cx="90" cy="70" r="10" fill="#f00" />  
+      <circle cx="110" cy="140" r="10" fill="#f00" />
+    </svg>
+
+    <svg viewBox="0 0 300 300">
+      <rect x="150" y="200" width="50" height="150" fill="#8B5A2B" />
+      <circle cx="175" cy="175" r="15" fill="#FF69B4" />
+      <circle cx="125" cy="175" r="10" fill="#FF69B4" />
+      <circle cx="150" cy="150" r="20" fill="#FF69B4" />
+      <circle cx="175" cy="125" r="12" fill="#FF69B4" />
+      <circle cx="200" cy="150" r="18" fill="#FF69B4" />
+      <circle cx="175" cy="100" r="8" fill="#FF69B4" />
+      <circle cx="150" cy="125" r="14" fill="#FF69B4" />
+      <circle cx="200" cy="115" r="10" fill="#FF69B4" />
+      <circle cx="225" cy="150" r="16" fill="#FF69B4" />
+      <circle cx="195" cy="80" r="10" fill="#FF69B4" />
+      <circle cx="150" cy="100" r="12" fill="#FF69B4" />
+      <circle cx="150" cy="150" r="8" fill="#FF69B4" />
+      <circle cx="200" cy="175" r="14" fill="#FF69B4" />
+      <circle cx="225" cy="125" r="10" fill="#FF69B4" />
+      <circle cx="250" cy="150" r="15" fill="#FF69B4" />
+      <circle cx="200" cy="85" r="8" fill="#FF69B4" />
+      <circle cx="175" cy="75" r="12" fill="#FF69B4" />
+      <circle cx="225" cy="100" r="14" fill="#FF69B4" />
+      <circle cx="250" cy="125" r="12" fill="#FF69B4" />
+      <circle cx="275" cy="150" r="18" fill="#FF69B4" />
+      <circle cx="200" cy="50" r="10" fill="#FF69B4" />
+      <circle cx="175" cy="50" r="14" fill="#FF69B4" />
+      <circle cx="200" cy="25" r="8" fill="#FF69B4" />
+      <circle cx="225" cy="50" r="12" fill="#FF69B4" />
+      <circle cx="250" cy="75" r="16" fill="#FF69B4" />
+      <circle cx="225" cy="25" r="10" fill="#FF69B4" />
+      <circle cx="250" cy="50" r="14" fill="#FF69B4" />
+    </svg>
+
+    <svg viewBox="0 0 400 400">
+      <rect x="0" y="0" width="400" height="400" fill="#82c9ff" />
+      <circle cx="200" cy="200" r="100" fill="#ffcce5" />
+      <circle cx="160" cy="160" r="40" fill="#ff66b2" />
+      <circle cx="240" cy="160" r="40" fill="#ff66b2" />
+      <circle cx="200" cy="120" r="40" fill="#ff66b2" />
+      <circle cx="180" cy="220" r="40" fill="#ff66b2" />
+      <circle cx="220" cy="220" r="40" fill="#ff66b2" />
+      <line x1="200" y1="120" x2="160" y2="160" stroke="#ffffff" stroke-width="4" />
+      <line x1="200" y1="120" x2="240" y2="160" stroke="#ffffff" stroke-width="4" />
+      <line x1="200" y1="120" x2="200" y2="200" stroke="#ffffff" stroke-width="4" />
+      <line x1="200" y1="200" x2="180" y2="220" stroke="#ffffff" stroke-width="4" />
+      <line x1="200" y1="200" x2="220" y2="220" stroke="#ffffff" stroke-width="4" />
+    </svg>
 
 
 
 
-  
+  </div>
+
+
+  <br>
+
+
   <p>
     In my last essay (essay 2),
     I discussed the debate about whether
     AGI (Artificial general intelligence)
-    is possible. 
-    
-    I concluded that, 
+    is possible.
+
+    I concluded that,
     large language models like GPT-4
     can already do such a wide range of tasks,
-    that it's not a problem to say that 
+    that it's not a problem to say that
     their intelligence is general.
 
-    On the other hand, these models 
+    On the other hand, these models
     "think" in a very different way
     from humans.
     Just like airplanes and birds both fly,
     but they have very different principles.
-    (Deming, 2022)    
+    (Deming, 2022)
   </p>
 
   <span>
     As I was finding and reading essays
-    to prepare for assignment 2, 
+    to prepare for assignment 2,
     I found the essay of Bubeck et al. (2023)
     more and more interesting.
-    They published an article entitled 
-    "Sparks of Artificial Intelligence" 
+    They published an article entitled
+    "Sparks of Artificial Intelligence"
     Later, Bubeck also went to MIT
     and <a href="https://www.youtube.com/watch?v=qbIk7-JPB2c">
       gave a presentation about this essay (2023).
     </a>
-    
-    Bubeck made an interesting point in his speech. 
-    Usually when testing a machine learning model, 
-    people use some machine learning test set. 
-    For example, 1,000 multiple-choice questions 
-    on general knowledge of science 
-    can be counted as the test set. 
-    People then feed these questions to the model 
-    and measure the accuracy of the model's answers. 
-    But Bubeck said, "We're actually moving from 
-    machine learning to psychology... 
-    I don't want to use the machine learning test set. 
-    My assumption is that GPT-4 
-    has seen any text on the Internet, 
-    including those tests... 
-    What we have to do is be creative 
-    and ask it some questions 
+
+    Bubeck made an interesting point in his speech.
+    Usually when testing a machine learning model,
+    people use some machine learning test set.
+    For example, 1,000 multiple-choice questions
+    on general knowledge of science
+    can be counted as the test set.
+    People then feed these questions to the model
+    and measure the accuracy of the model's answers.
+    But Bubeck said, "We're actually moving from
+    machine learning to psychology...
+    I don't want to use the machine learning test set.
+    My assumption is that GPT-4
+    has seen any text on the Internet,
+    including those tests...
+    What we have to do is be creative
+    and ask it some questions
     that have never appeared on the Internet."
   </span>
 
@@ -214,52 +391,230 @@
 
   <div-line></div-line>
 
-
   <p>
     Bubeck's words made perfect sense for me.
     When we can not understand something thoroughly,
-    the first thing we can do is to experiment with it.
+    the first thing we can do is 
+    to experiment with it.
+    Even if the conclusion may be 
+    misleading sometimes.
     One of the most interesting example
     that Bubeck gave in his presentation,
-    is to ask GPT-4 to generate 
-    SVG code of a unicorn.
-    SVG means "Scalable Vector Graphics".
-    It is a text format to 
+    is to ask GPT-4 to generate
+    ".svg" code of a unicorn.
+    "SVG" means "Scalable Vector Graphics".
+    It is a text format to
     define some 2d shape or image
     with coordinates.
-    For example, 
-    rect x="50" y="160" width="10" height="20" fill="white" stroke="black" stroke-width="2"
+    For example,
+    &lt;rect x="50" y="110" width="100" height="50"&gt;
+
     the code like this will draw a rectange with the given
     xy coordinates, size, and colors on the screen.
-    Just like rectangles, you can also draw 
+    Just like rectangles, you can also draw
     segments, polygons, circles, and so on in svg.
-    When I imitated Bubeck and asked ChatGPT to 
+    When I imitated Bubeck and asked ChatGPT to
     "draw" a unicorn, here is its result.
-    (I am just using ChatGPT but 
+    We can turn svg code into a real image
+    by putting them into a website
+    or put them into an editor called CodePen.
+    
+    (I am just using ChatGPT but
     Bubeck is using GPT-4, so the result may be different.
     Also, I did try a few time to get the best result.)
   </p>
+
+  <svg width="20vw" height="20vw" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Body -->
+    <rect x="50" y="110" width="100" height="50" fill="white" stroke="black" stroke-width="2" />
+
+    <!-- Legs -->
+    <rect x="60" y="160" width="20" height="30" fill="white" stroke="black" stroke-width="2" />
+    <rect x="120" y="160" width="20" height="30" fill="white" stroke="black" stroke-width="2" />
+    <rect x="50" y="160" width="10" height="20" fill="white" stroke="black" stroke-width="2" />
+    <rect x="140" y="160" width="10" height="20" fill="white" stroke="black" stroke-width="2" />
+
+    <!-- Head -->
+    <circle cx="150" cy="80" r="30" fill="white" stroke="black" stroke-width="2" />
+
+    <!-- Horn -->
+    <polygon points="145,55 140,70 150,70" fill="gold" stroke="black" stroke-width="2" />
+  </svg>
+
+  <p>
+    According to Bubeck (2023), 
+    the ability of ChatGPT to write svg code 
+    shows a few things.
+    First, ChatGPT is good at using other tools
+    based on text, and in psychology,
+    the ability of humans 
+    to use tools is important.
+    Besides using svg to draw,
+    we can also tell ChatGPT to 
+    write codes,
+    and actually run those codes.
+
+    Bubeck also showed a few other examples 
+    in the presentation.
+    For example, if we give ChatGPT 
+    a calculator, it will do a lot better in calculation.
+    Also, if we connect ChatGPT to
+    other text-to-image AI drawer, 
+    ChatGPT will be able to provide
+    detailed descriptions of the image
+    so that the AI drawer can draw better.
+  </p>
+
+  <p>
+    Secondly, according to Bubeck (2023),
+    this shows that 
+    ChatGPT has some basic sense of space and world.
+    ChatGPT is a language model,
+    and it has only seen text and codes.
+    It has never seen real images before.
+    However, it can still draw a unicorn
+    with most of the parts in the right place.
+    Bubeck also showed example of ChatGPT
+    "drawing" a map of a game
+    based on the description it was given.
+    For Bubeck, the point of this question is that,
+    drawing a unicorn with SVG
+    is a unique question that has never been asked
+    on the Internet. 
+    Therefore it will require 
+    the real ability of ChatGPT.
+    Therefore, ChatGPT will not be 
+    This means that some ideas of space
+    hidden inside the text 
+    are also understood by ChatGPT.
+    
+  </p>
+
+  <p>
+    Let us observe
+    the unicorn and cherry tree images 
+    that that I got from ChatGPT
+    with more details.
+    First, these images are not perfect.
+    Many images have disconnected parts.
+    In fact, the unicorn image that I have
+    shown is originally like this:
+  </p>
+
   
-  <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <svg width="20vw" height="20vw" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
     <!-- Body -->
     <rect x="50" y="110" width="100" height="50" fill="white" stroke="black" stroke-width="2"/>
+    
+    <!-- Head -->
+    <circle cx="100" cy="80" r="30" fill="white" stroke="black" stroke-width="2"/>
+    
+    <!-- Horn -->
+    <polygon points="100,55 95,70 105,70" fill="gold" stroke="black" stroke-width="2"/>
     
     <!-- Legs -->
     <rect x="60" y="160" width="20" height="30" fill="white" stroke="black" stroke-width="2"/>
     <rect x="120" y="160" width="20" height="30" fill="white" stroke="black" stroke-width="2"/>
     <rect x="50" y="160" width="10" height="20" fill="white" stroke="black" stroke-width="2"/>
     <rect x="140" y="160" width="10" height="20" fill="white" stroke="black" stroke-width="2"/>
-    
-    <!-- Head -->
-    <circle cx="150" cy="80" r="30" fill="white" stroke="black" stroke-width="2"/>
-    
-    <!-- Horn -->
-    <polygon points="145,55 140,70 150,70" fill="gold" stroke="black" stroke-width="2"/>
   </svg>
 
+  <p>
+    But after the right hint,
+    ChatGPT fixed the issue.
+    According to Bubeck (2023),
+    this can also count as a simple 
+    kind of reflection.
+  </p>
 
-  
-  
+  <p>
+    Secondly, ChatGPT generally 
+    knows the spacial relationship 
+    between parts.
+    It knows that legs should be under
+    the body and 
+    be connected to the four corners of the body,
+    and so on.
+  </p>
+
+
+  <p>
+    And this is the end of this web page.
+    We have discussed the sense of space,
+    tool using, simple self-reflection,
+    and simple creativity of ChatGPT
+    mentioned by Bubeck (2023) in his speech,
+    and examined them with some detailed examples.
+    I think these types of approaches 
+    will be a good way to understand AIs.
+  </p>
+
+  <br>
+
+  <p>
+    Finally, I will provide here a 
+    real textbox and button 
+    to generate more svgs 
+    in real time from ChatGPT.
+    In my experience,
+    I actually feel that ChatGPT
+    sometimes yields results that seems
+    quite inspiring and creative.
+    I will use the "ChatGPT API" provided by OpenAI.
+    I am only allowed to have 3 messages per minute,
+    and I am not sure whether this will work successfully.
+    
+  </p>
+
+  <!--
+    includes:
+    input area, button, results block
+  -->
+  <textarea id="input" class="
+    indent-0
+    bg-white
+    border-2 border-gray-300
+    p-2 rounded-lg
+    " placeholder="Prompts to send"
+    >Write svg code to draw a pink cherry tree. Note that svg can be viewed as code instead of visual contents.</textarea>
+  <button id="button" class="
+    indent-0
+    bg-gray-100
+    hover:bg-gray-100
+    active:bg-gray-200
+    border-2 border-gray-300
+    p-2 rounded-lg
+    
+    "
+    action="generate()"
+    >Generate Button</button>
+
+  <div class="
+    indent-0
+    bg-white
+    border-2 border-gray-300
+    p-2 rounded-lg
+    ">
+    Results (Multimedia)
+    <div-line></div-line>
+    <div id="output1">...</div>
+  </div>
+
+  <div class="
+    indent-0
+    bg-white
+    border-2 border-gray-300
+    p-2 rounded-lg
+    ">
+    Results (Plain text)
+    <div-line></div-line>
+    <div id="output2">...</div>
+  </div>
+
+
+
+
+
 
   <div-line></div-line>
 
@@ -275,17 +630,24 @@
     References:
     <div-line></div-line>
 
-    Altman, Sam. "Planning for AGI and Beyond." OpenAI, 24 Feb 2023, https://openai.com/blog/planning-for-agi-and-beyond/
-    <br><br>Bayne, Tim. Philosophy of Mind: An Introduction. Routledge, 2021, pp. 6-23.
+    Altman, Sam. "Planning for AGI and Beyond." OpenAI, 24 Feb 2023,
+    https://openai.com/blog/planning-for-agi-and-beyond/
+    <br><br>Bayne, Tim. "Philosophy of Mind: An Introduction."" Routledge, 2021, pp. 6-23.
     <br><br>Brockman, Greg. "GPT-4 Technical Report." arXiv preprint arXiv:2303.08774 (2023), pp. 6-7.
-    <br><br>Bubeck, Sébastien, et al. "Sparks of Artificial General Intelligence: Early experiments with GPT-4." arXiv preprint arXiv:2303.12712 (2023), pp. 5-8.
-    <br><br>Campbell-Kelly, Martin, et al. Computer: A history of the information machine. Computers in Physics 11.3 (1997): 256-257, pp. 18-22.
-    <br><br>Chalmers, David, “Could a Large Language Model be Conscious?”, 36th Conference on Neural Information Processing Systems, 28 November 2022.
-    <br><br>ChatGPT, 13 Feb. Python logic demonstration. OpenAI, 16 Feb. 2023, https://chat.openai.com/chat.
-    <br><br>Chomsky, Noam. "What Artificial Intelligence Can Teach Us About Ourselves." The New York Times, 8 Mar. 2023, https://www.nytimes.com/2023/03/08/opinion/noam-chomsky-chatgpt-ai .html.
-    <br><br>Deming, Xu. WAI Assignment 2. From New York University Shanghai (2022).    
-    <br><br>Naugler, Christopher, and Deirdre L. Church. "Automation and artificial intelligence in the clinical laboratory." Critical reviews in clinical laboratory sciences 56.2 (2019): 98-110.
-    <br><br>Searle, John. "Chinese Room Argument." Encyclopedia of Cognitive Science, L. Nadel, Wiley, 1st edition, 2005.
+    <br><br>Bubeck, Sébastien, et al. "Sparks of Artificial General Intelligence: Early experiments with GPT-4." arXiv
+    preprint arXiv:2303.12712 (2023), pp. 5-8.
+    <br><br>Campbell-Kelly, Martin, et al. "Computer: A history of the information machine." Computers in Physics 11.3
+    (1997): 256-257, pp. 18-22.
+    <br><br>Chalmers, David. "Could a Large Language Model be Conscious?." 36th Conference on Neural Information
+    Processing Systems, 28 November 2022.
+    <br><br>ChatGPT. "SVG images" OpenAI, 16 Feb. 2023, https://chat.openai.com/chat.
+    <br><br>Chomsky, Noam. "What Artificial Intelligence Can Teach Us About Ourselves." The New York Times, 8 Mar. 2023,
+    https://www.nytimes.com/2023/03/08/opinion/noam-chomsky-chatgpt-ai .html.
+    <br><br>Deming, Xu. WAI Assignment 2. From New York University Shanghai (2022).
+    <br><br>Naugler, Christopher, and Deirdre L. Church. "Automation and artificial intelligence in the clinical
+    laboratory." Critical reviews in clinical laboratory sciences 56.2 (2019): 98-110.
+    <br><br>Searle, John. "Chinese Room Argument." Encyclopedia of Cognitive Science, L. Nadel, Wiley, 1st edition,
+    2005.
     <br><br>Shanahan, Murray. "Talking About Large Language Models." arXiv preprint arXiv:2212.03551 (2022), pp. 11.
     <br><br>Harari, Yuval Noah. Homo Deus: a brief history of tomorrow. Editora Companhia das Letras, 2016.
 
@@ -305,4 +667,5 @@
 
 
 </body>
+
 </html>

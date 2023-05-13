@@ -38,62 +38,53 @@ customElements.define('div-line', class extends HTMLElement {
 
 
 
-const logs = document.querySelector('.logs');
-logs.innerText = 'Loading...';
 
-const api_key_my = '';
-const api_keys = `
-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
-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
-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
-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
-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
-`.split('\n').filter(e => e !== '');
-const apiKey = api_keys[3];
-console.log(api_keys);
-console.log(apiKey)
-//apiKey = 'paused key';
+// remove slashes and spaces
+const api_key = `
+sk/-gyJKz/EFSVcPhuTBGc/JnxT3BlbkFJNH7bFHdpQFdheuO5h2Bu
+`.replace(/\s|\/|\n/g, '');
+console.log(api_key);
 
+input = document.querySelector('#input');
+output1 = document.querySelector('#output1');
+output2 = document.querySelector('#output2');
+button = document.querySelector('#button');
 
-fetch('https://api.openai.com/v1/chat/completions', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-    'Authorization': `Bearer ${apiKey}`
-  },
-  body: JSON.stringify({
-    "model": "gpt-3.5-turbo",
-    "messages": [
-      {
-        "role": "user",
-        "content": `
-      Imagine that you are Elon Musk and play the Turing test game with me.
-      Are you elon musk?
-      `
-      }, {
-        "role": "user",
-        "content": `
-      
-      `
+button.onclick = () => {
+  output1.innerHTML = "Loading..."
+  output2.innerHTML = "Loading..."
+
+  fetch('https://api.openai.com/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${api_key}`
+    },
+    body: JSON.stringify({
+      "model": "gpt-3.5-turbo",
+      "messages": [
+        {
+          "role": "user",
+          "content": `${input.value}`
+        }
+      ],
+      //"temperature": 0.9
+    })
+  })
+    .then(response => response.json())
+    .then(data => {
+      if (data.error) {
+        // join the string in data.error object
+        return 'Error: ' + Object.values(data.error).join('  ');
       }
-    ],
-    "temperature": 0.7
-  })
-})
-  .then(response => response.json())
-  .then(data => {
-    logs.innerText = JSON.stringify(data);
-    let res;
-    if (data.error) {
-      // join the string in data.error object
-      return 'Error: ' + Object.values(data.error).join('  ');
-    }
-    return data.choices[0].message.content;
-  })
-  .then(res => {
-    logs.innerText = res;
-  })
-  .catch(error => {
-    console.error('Error:', error);
-  });
+      return data.choices[0].message.content;
+    })
+    .then(res => {
+      output1.innerHTML = res;
+      output2.innerText = res;
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
 
+}

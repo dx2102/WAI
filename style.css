@@ -27,3 +27,13 @@ a {
   text-decoration: underline;
 }
 
+svg {
+  /* 
+  to ensure svg works inside 
+  grids layout
+  in safari,
+  we should set the width and height
+
+  */
+  width: 100%;
+}
